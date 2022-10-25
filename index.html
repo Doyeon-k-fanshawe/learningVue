@@ -20,8 +20,9 @@
     <button @click="logClick">Click Me!</button>
 
     <section v-for="prof in remoteData">
+      <p>Header should be clickable</p>
       <!-- <pre>{{ prof }}</pre> -->
-      <h1>{{ prof.name }}</h1>
+      <h1 @click="showMyData(prof)">{{ prof.name }}</h1>
       <h2>{{ prof.nickname }}</h2>
       <h3>{{ prof.role }}</h3>
 
@@ -32,6 +33,10 @@
       <input v-model="username" type="text" placeholder="username">
       <input v-model="password" type="password" placeholder="password">
       <input @click="sendFormData" type="submit" value="go!">
+    </section>
+
+    <section class="lightbox">
+      <pre>{{ currentProf }}</pre>
     </section>
 
   </main>

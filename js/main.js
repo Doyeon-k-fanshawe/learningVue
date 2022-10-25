@@ -1,3 +1,6 @@
+// import all of the Vue components here 
+import ProfPanel from './components/TheProfPanel.js';
+
 (() => {
   // this imports the Vue library as a variable called Vue
   const { createApp } = Vue
@@ -44,8 +47,12 @@
       showMyData(data) {
         console.table(data);
         this.currentProf = data;
-      }
+      },
 
+    },
+
+    components: {
+      theprofpanel: ProfPanel
     }
 
   }).mount('#app');
